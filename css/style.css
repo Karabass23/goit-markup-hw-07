@@ -1,14 +1,66 @@
-/* Цвет шапки и футера #2F303A */
+/* Шрифты */
 
-/* Основной цвет секции #FFFFFF */
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'),
+        url('../fonts/Raleway-Bold.woff2') format('woff2'),
+        url('../fonts/Raleway-Bold.woff') format('woff'),
+        url('../fonts/Raleway-Bold.ttf') format('truetype'),
+        url('../fonts/Raleway-Bold.svg#Raleway-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 
-/* Дополнительный цвет секции #F5F4FA */
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'),
+        url('../fonts/Roboto-Black.woff2') format('woff2'),
+        url('../fonts/Roboto-Black.woff') format('woff'),
+        url('../fonts/Roboto-Black.ttf') format('truetype'),
+        url('../fonts/Roboto-Black.svg#Roboto-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
-/* Основной цвет текста #757575 */
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'),
+        url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.ttf') format('truetype'),
+        url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 
-/* Дополнительный цвет текста #212121 */
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'),
+        url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype'),
+        url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
-/* Визуальный цвет текста #2196F3 */
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'),
+        url('../fonts/Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/Roboto-Medium.woff') format('woff'),
+        url('../fonts/Roboto-Medium.ttf') format('truetype'),
+        url('../fonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Переменные */
 
 :root {
     --primary-text-color:#757575;
@@ -21,10 +73,12 @@
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Нормализация */
+
 body {
     background-color: var(--primary-section-color);
     color: var(--primary-text-color);
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 0.03em;
 }
 
@@ -49,6 +103,8 @@ img {
 h1, h2, h3, h4, p {
     margin: 0;
 }
+
+/* Hidden */
 
 .visually-hidden {
     position: absolute;
@@ -89,7 +145,7 @@ h1, h2, h3, h4, p {
 
 /* Лого */
 .logo {
-    font-family: Raleway, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
@@ -320,10 +376,12 @@ h1, h2, h3, h4, p {
 .specifics-section__cards {
     position: relative;
     transform: scale(1);
+
+    transition: transform 250ms var(--timing-function);
 }
 
 .specifics-section__cards:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .specifics-section__depiction {
