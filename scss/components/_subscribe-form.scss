@@ -1,8 +1,9 @@
-.subscribe-form__text {
+.subscribe-form {
+  &__text {
     display: block;
-}
+  }
 
-.subscribe-form__input {
+  &__input {
     padding: 15px 16px;
 
     width: 358px;
@@ -13,19 +14,19 @@
     color: var(--primary-section-color);
 
     transition: border 250ms var(--timing-function);
-}
 
-.subscribe-form__input:focus {
-    border: 1px solid var(--visual-text-color);
-}
+    &:focus {
+      border: 1px solid var(--visual-text-color);
+    }
 
-.subscribe-form__input::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    color: rgba(255, 255, 255, 0.6);
-}
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
 
-.subscribe-form__button {
+  &__button {
     position: relative;
     padding: 10px 62px 10px 29px;
 
@@ -41,19 +42,19 @@
     border: 0;
 
     transition: background-color 250ms var(--timing-function);
-}
 
-.subscribe-form__button:focus,
-.subscribe-form__button:hover {
-    background-color: #188ce8;
-}
+    &:focus,
+    &:hover {
+      background-color: #188ce8;
+    }
+  }
 
-.subscribe-form__thumb {
+  &__thumb {
     display: inline-block;
     margin-left: 12px;
-}
+  }
 
-.subscribe-form__icon {
+  &__icon {
     position: absolute;
     top: 50%;
     right: 28px;
@@ -62,4 +63,5 @@
     width: 24px;
     height: 24px;
     fill: #fff;
+  }
 }
